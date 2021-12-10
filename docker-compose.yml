@@ -1,0 +1,13 @@
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    restart: unless-stopped
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: 'SECRET'
+      MYSQL_DATABASE: 'KookShopDB'
+      MYSQL_USER: 'Lumen'
+      MYSQL_PASSWORD: 'SECRET'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
