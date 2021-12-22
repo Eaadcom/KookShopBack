@@ -13,9 +13,9 @@ class CreateShopitemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('shopitems', function (Blueprint $table) {
+        Schema::create('shop_items', function (Blueprint $table) {
             $table->id();
-            $table->string('id')->unique();
+            $table->string('itemId')->unique();
             $table->string('product')->notNullable();
             $table->integer('price')->notNullable();
             $table->timestamps();
@@ -29,6 +29,6 @@ class CreateShopitemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('shopitems');
+        Schema::dropIfExists('shop_items');
     }
 }

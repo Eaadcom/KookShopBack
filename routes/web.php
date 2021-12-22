@@ -13,6 +13,11 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+use Laravel\Lumen\Routing\Router;
+
+$router->group(['prefix' => 'api'], function (Router $router) {
+
+    $router->get('accounts/{id}', [
+        'uses' => 'AccountController@get'
+    ]);
 });

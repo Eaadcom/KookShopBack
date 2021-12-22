@@ -74,6 +74,10 @@ $app->configure('app');
 |
 */
 
+$app->middleware([
+    \Fruitcake\Cors\HandleCors::class,
+]);
+
 // $app->middleware([
 //     App\Http\Middleware\ExampleMiddleware::class
 // ]);
@@ -88,11 +92,12 @@ $app->configure('app');
 |--------------------------------------------------------------------------
 |
 | Here we will register all of the application's service providers which
-| are used to bind services into the container. Service providers are
+| are used to bind Services into the container. Service providers are
 | totally optional, so you are not required to uncomment this line.
 |
 */
 
+$app->register(Fruitcake\Cors\CorsServiceProvider::class);
 // $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);

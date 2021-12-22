@@ -13,7 +13,7 @@ class CreateNewsitemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('newsitems', function (Blueprint $table) {
+        Schema::create('news_items', function (Blueprint $table) {
             $table->id();
             $table->string('title')->unique();
             $table->string('image')->notNullable();
@@ -29,6 +29,6 @@ class CreateNewsitemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('newsitems');
+        Schema::dropIfExists('news_items');
     }
 }
