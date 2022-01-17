@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\ShopItem;
+use App\Models\AccountProduct;
 use Illuminate\Database\Seeder;
 
-class ShopitemsTableSeeder extends Seeder
+class AccountProductsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,8 +14,8 @@ class ShopitemsTableSeeder extends Seeder
      */
     public function run()
     {
-        ShopItem::factory()
-            ->count(5)
+        AccountProduct::factory()
+            ->count(3)
             ->create();
     }
 }

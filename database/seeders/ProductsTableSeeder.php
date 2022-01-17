@@ -15,7 +15,7 @@ class ProductsTableSeeder extends Seeder
     public function run()
     {
         Product::factory()
-            ->count(5)
+            ->count(10)
             ->create();
     }
 }

@@ -14,10 +14,9 @@ class CreateAccountsTable extends Migration
     public function up()
     {
         Schema::create('accounts', function (Blueprint $table) {
-            $table->id();
+            $table->id()->unique();
             $table->string('email')->unique();
             $table->string('password')->notNullable();
-            $table->string('ownedProducts');
             $table->timestamps();
         });
     }

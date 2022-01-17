@@ -14,7 +14,7 @@ class NewsItemFactory extends Factory
     	return [
     	    'title' => $this->faker->unique->word,
             'image' => 'Image',
-            'content' => 'lorem ipsum dolor amet'
+            'content' => $this->faker->paragraph,
     	];
     }
 }

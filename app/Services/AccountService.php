@@ -9,7 +9,7 @@ class AccountService
 
     public function get($id)
     {
-        return Account::select('id', 'email', 'ownedProducts')
+        return Account::select('id', 'email')
             ->findOrFail($id);
     }
 }

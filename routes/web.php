@@ -17,7 +17,26 @@ use Laravel\Lumen\Routing\Router;
 
 $router->group(['prefix' => 'api'], function (Router $router) {
 
+    // AUTH
+    $router->post('register', [
+        'uses' => 'AuthController@register'
+    ]);
+    $router->post('login', [
+        'uses' => 'AuthController@login'
+    ]);
+
+    // Accounts
     $router->get('accounts/{id}', [
         'uses' => 'AccountController@get'
+    ]);
+
+    // Products
+    $router->get('products', [
+        'uses' => 'ProductController@get'
+    ]);
+
+    // News
+    $router->get('news', [
+        'uses' => 'NewsItemController@get'
     ]);
 });

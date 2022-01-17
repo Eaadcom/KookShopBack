@@ -14,7 +14,6 @@ class AccountFactory extends Factory
     	return [
             'email' => $this->faker->unique()->safeEmail,
             'password' => 'kookshop',
-            'ownedProducts' => '',
     	];
     }
 }

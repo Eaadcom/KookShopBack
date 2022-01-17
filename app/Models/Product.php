@@ -10,6 +10,10 @@ class Product extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id', 'name', 'previewImage', 'data'
+        'name', 'previewImage', 'description', 'price'
     ];
+
+    public function ownedBy(){
+        return $this->belongsToMany(AccountProduct::class);
+    }
 }

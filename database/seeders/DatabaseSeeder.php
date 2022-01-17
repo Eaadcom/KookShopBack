@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
             AccountsTableSeeder::class,
             NewsItemsTableSeeder::class,
             ProductsTableSeeder::class,
-            ShopitemsTableSeeder::class,
+            AccountProductsTableSeeder::class,
         ]);
     }
 }
