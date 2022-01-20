@@ -16,7 +16,7 @@ class CreateAccountProductsTable extends Migration
         Schema::create('account_products', function (Blueprint $table) {
             $table->id()->unique();
             $table->string('accountId')->notNullable();
-            $table->string('productId')->notNullable();
+            $table->string('productName')->notNullable();
             $table->timestamps();
         });
     }

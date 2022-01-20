@@ -10,7 +10,7 @@ class AccountProduct extends Model
     use HasFactory;
 
     protected $fillable = [
-        'accountId', 'productId'
+        'accountId', 'productName'
     ];
 
     public function accounts(){

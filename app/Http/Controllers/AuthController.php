@@ -24,17 +24,16 @@ class AuthController extends Controller
 
             $account->save();
 
-            //return successful response
             return response()->json(['account' => $account, 'message' => 'CREATED'], 201);
 
         } catch (\Exception $e) {
-            //return error message
+
             return response()->json(['message' => 'User Registration Failed!'], 409);
         }
     }
 
     public function login(Request $request){
-        //validate incoming request
+
         $this->validate($request, [
             'email' => 'required|string',
             'password' => 'required|string',

@@ -14,8 +14,6 @@ class AccountProductsTableSeeder extends Seeder
      */
     public function run()
     {
-        AccountProduct::factory()
-            ->count(3)
-            ->create();
+
     }
 }

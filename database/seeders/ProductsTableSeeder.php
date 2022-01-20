@@ -14,8 +14,81 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
-        Product::factory()
-            ->count(10)
-            ->create();
+
+        $this->createPredefinedProducts();
+
+    }
+
+    private function createPredefinedProducts(){
+
+        Product::factory()->create([
+            'name' => 'Kip Gehaktballen',
+            'previewImage' => 'kipgehaktballetjes.jpg',
+            'description' => 'Net oliebollen maar dan gemaakt van kip.',
+            'price' => '5',
+        ]);
+
+        Product::factory()->create([
+            'name' => 'Chili con Carne',
+            'previewImage' => 'chiliconcarnekip.jpg',
+            'description' => 'Inclusief kip.',
+            'price' => '5',
+        ]);
+
+        Product::factory()->create([
+            'name' => 'Kip smoothie',
+            'previewImage' => 'kipsmoothie.jpg',
+            'description' => 'Koude kippensoep',
+            'price' => '5',
+        ]);
+
+        Product::factory()->create([
+            'name' => 'Krabsoep',
+            'previewImage' => 'krabsoep.jpg',
+            'description' => 'De kip van de zee.',
+            'price' => '5',
+        ]);
+
+        Product::factory()->create([
+            'name' => 'Pannenkoeken met Kip',
+            'previewImage' => 'pannenkoekenmetkip.jpg',
+            'description' => 'De beste manier om pannenkoeken te eten!',
+            'price' => '5',
+        ]);
+
+        Product::factory()->create([
+            'name' => 'Kip Spaghetti Bolognese',
+            'previewImage' => 'kipspaghetti.jpg',
+            'description' => 'Een saai recept weer spannend gemaakt met KIP!',
+            'price' => '5',
+        ]);
+
+        Product::factory()->create([
+            'name' => 'Hele Kip',
+            'previewImage' => 'helekip.jpeg',
+            'description' => 'Het is kipdag voor zeker 3 dagen als je deze in je eentje opeet.',
+            'price' => '5',
+        ]);
+
+        Product::factory()->create([
+            'name' => 'Kippensoep',
+            'previewImage' => 'kippensoep.jpg',
+            'description' => 'Voor wanneer je je kip wil drinken.',
+            'price' => '5',
+        ]);
+
+        Product::factory()->create([
+            'name' => 'Kip drumsticks uit de oven',
+            'previewImage' => 'kipdrumsticks.jpg',
+            'description' => 'Een hand vol.',
+            'price' => '5',
+        ]);
+
+        Product::factory()->create([
+            'name' => 'Kiprecept Verassingspakket',
+            'previewImage' => 'verrassing.jpg',
+            'description' => 'Ontvang een geheim Recept',
+            'price' => '5',
+        ]);
     }
 }

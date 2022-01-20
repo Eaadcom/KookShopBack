@@ -38,38 +38,44 @@ class Account extends Model implements AuthenticatableContract, AuthorizableCont
     public function getAuthPassword()
     {
         return $this->attributes['password'];
-        // TODO: Implement getAuthPassword() method.
     }
-
-    // UNUSED CODE BELOW
 
     public function getAuthIdentifierName()
     {
-        // TODO: Implement getAuthIdentifierName() method.
+        return 'id';
     }
+
+
+    // UNIMPLEMENTED CODE BELOW
+
 
     public function getAuthIdentifier()
     {
+        error_log(2);
         // TODO: Implement getAuthIdentifier() method.
     }
 
     public function getRememberToken()
     {
+        error_log(3);
         // TODO: Implement getRememberToken() method.
     }
 
     public function setRememberToken($value)
     {
+        error_log(4);
         // TODO: Implement setRememberToken() method.
     }
 
     public function getRememberTokenName()
     {
+        error_log(5);
         // TODO: Implement getRememberTokenName() method.
     }
 
     public function can($abilities, $arguments = [])
     {
+        error_log(6);
         // TODO: Implement can() method.
     }
 }

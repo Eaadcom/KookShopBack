@@ -16,15 +16,12 @@ class NewsItemsTableSeeder extends Seeder
     {
         NewsItem::factory()->create([
             'title' => 'Kipdag Returns',
-            'image' => 'kipdag.jpeg',
+            'image' => 'kipdag.jpg',
         ]);
         NewsItem::factory()->create([
             'title' => 'Ik hou van Soep',
             'image' => 'soupimage.jpeg',
         ]);
 
-//        NewsItem::factory()
-//            ->count(2)
-//            ->create();
     }
 }

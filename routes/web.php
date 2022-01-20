@@ -35,6 +35,14 @@ $router->group(['prefix' => 'api'], function (Router $router) {
         'uses' => 'ProductController@get'
     ]);
 
+    // AccountProducts
+    $router->post('accountProducts',[
+        'uses' => 'AccountProductController@post'
+    ]);
+    $router->get('accountProducts',[
+        'uses' => 'AccountProductController@get'
+    ]);
+
     // News
     $router->get('news', [
         'uses' => 'NewsItemController@get'
