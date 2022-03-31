@@ -14,7 +14,10 @@ class AccountProductService
     public function get(): Collection|array
     {
         $id = Auth::user()->id;
-        return AccountProduct::select(DB::raw('count(productName) as amount,productName'))->groupBy('productName')->get();
+        return AccountProduct::select(DB::raw('count(productName) as amount,productName'))
+            ->where('accountId', '=', $id)
+            ->groupBy('productName')
+            ->get();
 
     }
 
