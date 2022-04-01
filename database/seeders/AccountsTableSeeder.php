@@ -14,8 +14,8 @@ class AccountsTableSeeder extends Seeder
      */
     public function run()
     {
-        Account::factory()->create([
-            'email' => 'example@kookshop.com',
-        ]);
+//        Account::factory()->create([
+//            'email' => 'example@kookshop.com',
+//        ]);
     }
 }

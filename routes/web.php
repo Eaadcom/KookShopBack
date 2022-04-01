@@ -25,11 +25,6 @@ $router->group(['prefix' => 'api'], function (Router $router) {
         'uses' => 'AuthController@login'
     ]);
 
-    // Accounts
-    $router->get('accounts/{id}', [
-        'uses' => 'AccountController@get'
-    ]);
-
     // Products
     $router->get('products', [
         'uses' => 'ProductController@get'
